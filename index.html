@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Password Generator</div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="try-free">Try Free</button>
+                <button class="login">Log In</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Need a unique, secure password?</h1>
+                <p>Automatically generate, save and sync your passwords across all your devices at any time.</p>
+                <div class="hero-buttons">
+                    <button class="try-business">Try Business Free</button>
+                    <button class="try-personal">Try Personal Free</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/password-generator.svg" alt="Password Generator" />
+            </div>
+        </section>
+
+        <section class="generator-section">
+            <h2>Instantly generate a secure, random password</h2>
+            <p>Use our online password generator tool to instantly create a secure, random password.</p>
+            
+            <div class="password-generator">
+                <div class="password-display">
+                    <input type="text" id="password-output" readonly>
+                    <div class="password-actions">
+                        <button id="copy-password">Copy</button>
+                        <button id="generate-password">Generate</button>
+                    </div>
+                </div>
+
+                <div class="password-strength">
+                    <div class="strength-label">Password Strength:</div>
+                    <div class="strength-meter">
+                        <div class="strength-segment" id="segment-1"></div>
+                        <div class="strength-segment" id="segment-2"></div>
+                        <div class="strength-segment" id="segment-3"></div>
+                        <div class="strength-segment" id="segment-4"></div>
+                    </div>
+                    <div class="strength-text" id="strength-text">Medium</div>
+                </div>
+
+                <div class="customize-password">
+                    <h3>Customize your password</h3>
+                    
+                    <div class="length-slider">
+                        <label for="password-length">Password Length</label>
+                        <input type="range" id="password-length" min="8" max="30" value="12">
+                        <span id="length-value">12</span>
+                    </div>
+
+                    <div class="password-options">
+                        <div class="option-group">
+                            <div class="radio-option">
+                                <input type="radio" id="easy-to-say" name="password-type" checked>
+                                <label for="easy-to-say">Easy to say</label>
+                                <p>Avoid numbers and special characters</p>
+                            </div>
+                            
+                            <div class="radio-option">
+                                <input type="radio" id="easy-to-read" name="password-type">
+                                <label for="easy-to-read">Easy to read</label>
+                                <p>Avoid ambiguous characters like l, 1, O, and 0</p>
+                            </div>
+                            
+                            <div class="radio-option">
+                                <input type="radio" id="all-characters" name="password-type">
+                                <label for="all-characters">All characters</label>
+                                <p>Any character combinations like !, 7, h, K, and l1</p>
+                            </div>
+                        </div>
+                        
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="uppercase" checked>
+                                <label for="uppercase">Uppercase</label>
+                            </div>
+                            
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="lowercase" checked>
+                                <label for="lowercase">Lowercase</label>
+                            </div>
+                            
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="numbers">
+                                <label for="numbers">Numbers</label>
+                            </div>
+                            
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="symbols">
+                                <label for="symbols">Symbols</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="password-actions-row">
+                        <button id="copy-password-alt" class="copy-btn">Copy password</button>
+                        <button id="save-config" class="save-btn">Save configuration</button>
+                    </div>
+                    <div id="copy-notification" class="copy-notification">Copied</div>
+                    <div id="save-notification" class="save-notification">Configuration saved</div>
+                </div>
+                
+                <div class="password-history">
+                    <h3>Password History</h3>
+                    <div class="history-list" id="password-history-list">
+                        <p class="history-empty">No passwords in history yet.</p>
+                    </div>
+                    <button id="clear-history" class="clear-btn">Clear History</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits">
+            <div class="benefit-content">
+                <h2>Make that password easy to remember</h2>
+                <p>Our password manager does more than generate secure passwords. Try Premium and let us remember and autofill passwords for you.</p>
+                <button class="get-free">Get Free</button>
+            </div>
+            <div class="benefit-image">
+                <img src="images/password-manager.svg" alt="Password Manager" />
+            </div>
+        </section>
+
+        <section class="features">
+            <h2>Take your security to the next level</h2>
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-eye-slash"></i></div>
+                    <h3>Zero-knowledge security</h3>
+                    <p>Your data is kept secret, even from us. We protect your data with a local-only encryption model.</p>
+                    <a href="#" class="learn-more">Learn more about encryption</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-radar"></i></div>
+                    <h3>Be aware of digital threats</h3>
+                    <p>Premium's data breach monitoring immediately notifies you if your data has been compromised online.</p>
+                    <a href="#" class="learn-more">Dark web monitoring</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Nurture your habits</h3>
+                    <p>Premium helps you find and update weak, reused passwords with ones created by our password generator.</p>
+                    <a href="#" class="learn-more">Security dashboard</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon"><i class="fas fa-key"></i></div>
+                    <h3>Multifactor authentication</h3>
+                    <p>Enable additional authentication, like a one-time passcode or fingerprint scan, to protect your account.</p>
+                    <a href="#" class="learn-more">Multifactor options</a>
+                </div>
+            </div>
+
+            <div class="premium-upgrade">
+                <h3>Unlock Premium Features</h3>
+                <div class="price-plans">
+                    <div class="price-card">
+                        <div class="plan-name">Free</div>
+                        <div class="plan-price">$0<span>/month</span></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Basic password generation</li>
+                            <li><i class="fas fa-check"></i> Password strength checker</li>
+                            <li><i class="fas fa-check"></i> Password history (10 items)</li>
+                            <li><i class="fas fa-check"></i> Save configurations</li>
+                            <li class="feature-disabled"><i class="fas fa-times"></i> Bulk password generation</li>
+                            <li class="feature-disabled"><i class="fas fa-times"></i> Data breach scanner</li>
+                            <li class="feature-disabled"><i class="fas fa-times"></i> Cloud sync</li>
+                        </ul>
+                        <button class="current-plan">Current Plan</button>
+                    </div>
+                    
+                    <div class="price-card premium">
+                        <div class="popular-tag">Most Popular</div>
+                        <div class="plan-name">Premium</div>
+                        <div class="plan-price">$3.99<span>/month</span></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> Advanced password generation</li>
+                            <li><i class="fas fa-check"></i> Enhanced strength analysis</li>
+                            <li><i class="fas fa-check"></i> Unlimited password history</li>
+                            <li><i class="fas fa-check"></i> Multiple saved configurations</li>
+                            <li><i class="fas fa-check"></i> Bulk password generation</li>
+                            <li><i class="fas fa-check"></i> Data breach scanner</li>
+                            <li><i class="fas fa-check"></i> Cloud sync</li>
+                        </ul>
+                        <button class="upgrade-btn" id="upgrade-premium">Coming Soon</button>
+                        <div class="waitlist">
+                            <a href="#" id="join-premium-waitlist">Join Waitlist</a>
+                        </div>
+                    </div>
+                    
+                    <div class="price-card family">
+                        <div class="plan-name">Family</div>
+                        <div class="plan-price">$6.99<span>/month</span></div>
+                        <ul class="plan-features">
+                            <li><i class="fas fa-check"></i> All Premium features</li>
+                            <li><i class="fas fa-check"></i> Up to 6 users</li>
+                            <li><i class="fas fa-check"></i> Family password sharing</li>
+                            <li><i class="fas fa-check"></i> Dashboard for family admin</li>
+                            <li><i class="fas fa-check"></i> Password recovery assistance</li>
+                            <li><i class="fas fa-check"></i> Priority support</li>
+                            <li><i class="fas fa-check"></i> 1GB encrypted storage</li>
+                        </ul>
+                        <button class="upgrade-btn" id="upgrade-family">Coming Soon</button>
+                        <div class="waitlist">
+                            <a href="#" id="join-family-waitlist">Join Waitlist</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq">
+            <h2>Frequently asked questions</h2>
+            <div class="faq-items">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the password generator work?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The password generator creates random passwords based on parameters set by you. Parameters include password length, whether the password should be easy to say or read, and whether the password should have uppercase letters, lowercase letters, numbers, and symbols.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How to create a strong password</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A strong password is a unique password. A good password should be made up at least 15 characters, including lowercase letters, uppercase letters, numbers, and special characters. It shouldn't include common words or sensitive information.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can a strong password be hacked?</h3>
+                        <span class="toggle-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While a strong password can be technically hacked, it would take an imperceivable amount of time to do so. A 12-character password made up of numbers, uppercase and lowercase letters, and symbols would take about 34,000 years to hack.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Start your free trial</h2>
+            <div class="cta-buttons">
+                <button class="try-business">Try Business Free</button>
+                <button class="try-personal">Try Personal Free</button>
+            </div>
+            <p>Free trial for all plans. No credit card required.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Password Generator</h4>
+                <ul>
+                    <li><a href="#">Home Page</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">How It Works</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Features</h4>
+                <ul>
+                    <li><a href="#">Autofill</a></li>
+                    <li><a href="#">Password Vault</a></li>
+                    <li><a href="#">Digital Wallet</a></li>
+                    <li><a href="#">Password Manager</a></li>
+                    <li><a href="#">Password Generator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Support Center</a></li>
+                    <li><a href="#">Resource Center</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Preferences</a>
+                <p>&copy; 2023 Password Generator. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

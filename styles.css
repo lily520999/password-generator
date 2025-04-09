@@ -1,0 +1,1128 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #D32D27;
+    --secondary-color: #0275d8;
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --success-color: #28a745;
+    --warning-color: #ffc107;
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.nav-buttons button {
+    margin-left: 10px;
+}
+
+.try-free {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.login {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.hero-buttons button {
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+
+.try-business {
+    background-color: var(--primary-color);
+    color: white;
+    margin-right: 10px;
+}
+
+.try-personal {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Generator Section */
+.generator-section {
+    background-color: var(--light-color);
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.generator-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.generator-section p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    color: #555;
+}
+
+.password-generator {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: left;
+}
+
+.password-display {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+#password-output {
+    flex: 1;
+    padding: 12px;
+    font-size: 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    background-color: #f9f9f9;
+}
+
+.password-actions {
+    display: flex;
+}
+
+.password-actions button {
+    border-radius: 0;
+}
+
+#copy-password {
+    background-color: #f0f0f0;
+    color: var(--dark-color);
+}
+
+#generate-password {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0 4px 4px 0;
+}
+
+.customize-password h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.length-slider {
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.length-slider label {
+    flex: 1;
+    min-width: 150px;
+    font-weight: bold;
+}
+
+.length-slider input {
+    flex: 2;
+    min-width: 200px;
+}
+
+#length-value {
+    margin-left: 15px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.password-options {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.option-group {
+    flex: 1;
+    min-width: 300px;
+}
+
+.radio-option, .checkbox-option {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.radio-option input, .checkbox-option input {
+    margin-right: 10px;
+}
+
+.radio-option label, .checkbox-option label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.radio-option p {
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 25px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.checkbox-group {
+    flex: 1;
+    min-width: 300px;
+}
+
+.copy-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+
+.copy-notification {
+    display: none;
+    margin-top: 10px;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+/* Benefits Section */
+.benefits {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.benefit-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.benefit-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-content p {
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+.get-free {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+
+.benefit-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Features Section */
+.features {
+    background-color: var(--light-color);
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    margin-bottom: 1.5rem;
+    color: #555;
+}
+
+.learn-more {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 4rem 5%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.faq h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    font-size: 1.2rem;
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.faq-answer {
+    display: none;
+    padding: 0 0 1.5rem;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .toggle-icon {
+    transform: rotate(45deg);
+}
+
+/* CTA Section */
+.cta {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    margin-bottom: 1.5rem;
+}
+
+.cta-buttons button {
+    background-color: white;
+    color: var(--primary-color);
+    margin: 0 10px;
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 4rem 5% 2rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto 3rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 2rem;
+}
+
+.footer-section h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+    color: #ddd;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: 0 auto;
+    border-top: 1px solid #444;
+    padding-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.legal a {
+    color: #ddd;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.legal p {
+    color: #999;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .hero, .benefits {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content, .benefit-content {
+        margin-bottom: 3rem;
+    }
+    
+    .password-display {
+        flex-direction: column;
+    }
+    
+    #password-output {
+        border-radius: 4px 4px 0 0;
+    }
+    
+    .password-actions {
+        display: flex;
+    }
+    
+    #copy-password {
+        flex: 1;
+        border-radius: 0 0 0 4px;
+    }
+    
+    #generate-password {
+        flex: 1;
+        border-radius: 0 0 4px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .nav-menu, .nav-buttons {
+        display: none;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+    
+    .nav-menu.active li {
+        margin: 1rem 0;
+    }
+    
+    .nav-buttons.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(70px + 180px);
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+    
+    .nav-buttons.active button {
+        margin: 0.5rem 0;
+    }
+    
+    .footer-section {
+        flex: 100%;
+    }
+}
+
+/* Password Strength Indicator */
+.password-strength {
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.strength-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.strength-meter {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.strength-segment {
+    height: 8px;
+    flex: 1;
+    background-color: #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.strength-segment.very-weak {
+    background-color: #ff4d4d;
+}
+
+.strength-segment.weak {
+    background-color: #ffa64d;
+}
+
+.strength-segment.medium {
+    background-color: #ffff4d;
+}
+
+.strength-segment.strong {
+    background-color: #4dff88;
+}
+
+.strength-segment.very-strong {
+    background-color: #1a9900;
+}
+
+.strength-text {
+    font-weight: bold;
+    color: #666;
+}
+
+.strength-text.very-weak {
+    color: #ff4d4d;
+}
+
+.strength-text.weak {
+    color: #ffa64d;
+}
+
+.strength-text.medium {
+    color: #999900;
+}
+
+.strength-text.strong {
+    color: #00b33c;
+}
+
+.strength-text.very-strong {
+    color: #1a9900;
+}
+
+/* Password History */
+.password-history {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+}
+
+.password-history h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.history-list {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    background-color: #f9f9f9;
+}
+
+.history-empty {
+    padding: 1rem;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.history-password {
+    font-family: monospace;
+}
+
+.history-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.history-copy, .history-delete {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    padding: 0;
+    font-size: 1rem;
+}
+
+.history-delete {
+    color: var(--primary-color);
+}
+
+.clear-btn {
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 10px 20px;
+}
+
+/* Password Actions Row */
+.password-actions-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.copy-btn, .save-btn {
+    flex: 1;
+}
+
+.save-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+}
+
+.save-notification {
+    display: none;
+    margin-top: 10px;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+/* 付费升级部分 */
+.premium-upgrade {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.premium-upgrade h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.price-plans {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.price-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    border: 1px solid #eee;
+}
+
+.price-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.price-card.premium {
+    border: 2px solid var(--secondary-color);
+    z-index: 1;
+}
+
+.price-card.family {
+    border: 2px solid var(--primary-color);
+}
+
+.popular-tag {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.plan-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.plan-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+}
+
+.plan-price span {
+    font-size: 1rem;
+    color: #777;
+}
+
+.plan-features {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.plan-features li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.plan-features i {
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.plan-features .fas.fa-check {
+    color: var(--success-color);
+}
+
+.plan-features .fas.fa-times {
+    color: #ccc;
+}
+
+.feature-disabled {
+    color: #999;
+}
+
+.current-plan {
+    background-color: #f0f0f0;
+    color: #888;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: default;
+}
+
+.upgrade-btn {
+    background-color: #888;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: default;
+}
+
+.price-card.premium .upgrade-btn {
+    background-color: #888;
+}
+
+.price-card.family .upgrade-btn {
+    background-color: #888;
+}
+
+/* 响应式调整 */
+@media (max-width: 1024px) {
+    .price-plans {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .price-card {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 2rem;
+    }
+}
+
+/* 付费升级模态框 */
+.upgrade-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #999;
+}
+
+.modal-content h2 {
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.modal-content p {
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.payment-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.secure-note {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.secure-note i {
+    color: var(--success-color);
+    margin-right: 5px;
+}
+
+.success-message {
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.success-message i {
+    font-size: 4rem;
+    color: var(--success-color);
+    margin-bottom: 1rem;
+}
+
+.success-message h2 {
+    margin-bottom: 1rem;
+}
+
+.success-message p {
+    margin-bottom: 0.5rem;
+}
+
+.close-success {
+    background-color: var(--success-color);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+
+/* 等待名单链接样式 */
+.waitlist {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.waitlist a {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.price-card.family .waitlist a {
+    color: var(--primary-color);
+}
+
+.waitlist a:hover {
+    text-decoration: underline;
+}
+
+/* 等待名单模态框新样式 */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+}
+
+.waitlist-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.privacy-note {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.privacy-note i {
+    color: var(--secondary-color);
+    margin-right: 5px;
+} 
