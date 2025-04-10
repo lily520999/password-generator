@@ -1125,4 +1125,75 @@ textarea {
 .privacy-note i {
     color: var(--secondary-color);
     margin-right: 5px;
+}
+
+/* Policy Pages Styles */
+.policy-page {
+    padding: 80px 0;
+    background-color: #f9f9f9;
+    min-height: 70vh;
+}
+
+.policy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.policy-container h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.last-updated {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.policy-section {
+    margin-bottom: 30px;
+}
+
+.policy-section h2 {
+    color: #2c7be5;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.policy-section h3 {
+    color: #444;
+    margin: 20px 0 10px;
+}
+
+.policy-section p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.policy-section ul, .policy-section ol {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.policy-section li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .policy-container {
+        padding: 20px;
+        margin: 0 15px;
+    }
+    
+    .policy-page {
+        padding: 40px 0;
+    }
 } 
